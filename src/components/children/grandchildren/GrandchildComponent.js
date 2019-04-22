@@ -1,7 +1,9 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import AppContext from '../../Context';
 
 const GrandchildComponent = props => {
+
+    const [localThing, setLocalThing] = useState('')
 
     const { dispatch, state } = useContext(AppContext.AppContext);
     const {firstName, lastName } = state;
@@ -9,7 +11,7 @@ const GrandchildComponent = props => {
 
     return (
         <div>
-            <h2>Name: {`${firstName} ${lastName}`}</h2>
+            <h2>Name: {`${firstName} ${lastName} ${localThing}`}</h2>
             <p>first name:</p>
             <input
                 onChange={event => {
@@ -20,8 +22,8 @@ const GrandchildComponent = props => {
                     });
                 }}
             />
+
             <p>last name:</p>
-            
             <input
                 onChange={event => {
                     const { value } = event.target;
@@ -29,6 +31,14 @@ const GrandchildComponent = props => {
                         type: 'SET_LAST_NAME',
                         lastName: value
                     });
+                }}
+            />
+
+            <p>local thing:</p>
+            <input
+                onChange={event => {
+                    const { value } = event.target;
+                    setLocalThing(value);
                 }}
             />
         </div>
