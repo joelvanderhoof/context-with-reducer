@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import appContext from '../../../Context';
+import appContext from 'Context';
 import GiphyTile from './GiphyTile'; 
 
 const GrandchildComponent = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import ChildComponent from './children/ChildComponent';
+import ChildComponent from 'components/children/ChildComponent';
 
 const NameSection = props => {
 

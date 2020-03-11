@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-// import appContext from '../../../Context';
 import appContext from 'Context';
 
 const GiphyTile = () => {

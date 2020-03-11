@@ -1,7 +1,7 @@
 import React from 'react';
 
-import appContext from './Context';
-import NameSection from './components/NameSection';
+import appContext from 'Context';
+import NameSection from 'components/NameSection';
 
 import './App.css';
 
