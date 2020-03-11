@@ -1,20 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import AppContext from './components/Context';
+import appContext from './Context';
 import NameSection from './components/NameSection';
 
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
+const App  = () => {
+  return (
+    <appContext.ContextProvider>
       <div className="App">
-      <AppContext.AppContextProvider>
           <NameSection />              
-      </AppContext.AppContextProvider>
       </div>
-    );
-  }
+    </appContext.ContextProvider>
+  );
 }
 
 export default App;

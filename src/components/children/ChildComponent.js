@@ -2,15 +2,6 @@ import React from 'react';
 
 import GrandchildComponent from './grandchildren/GrandchildComponent';
 
-const ChildComponent = props => {
-
-    return (
-        <div>
-            <GrandchildComponent />
-            <GrandchildComponent />
-            <GrandchildComponent />
-        </div>
-    );
-}
+const ChildComponent = () => <GrandchildComponent />;
 
 export default ChildComponent;
