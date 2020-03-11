@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react';
-import appContext from 'Context';
+import { Context } from 'Context';
 import GiphyTile from './GiphyTile'; 
 
 const GrandchildComponent = () => {
     const [localThing, setLocalThing] = useState('');
-    const { actions, dispatch, state } = useContext(appContext.Context);
+    const { actions, dispatch, state } = useContext(Context);
     const {firstName, lastName } = state;
 
     return (

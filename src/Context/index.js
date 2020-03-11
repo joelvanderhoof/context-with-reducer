@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { createContext, useReducer } from 'react';
 
-const Context = createContext();
+export const Context = createContext();
 
 const initialState = {
     firstName: '',
@@ -54,7 +54,7 @@ const middleware = dispatch =>  async action => {
 };
 
 
-const ContextProvider = props => {
+export const ContextProvider = props => {
     const [state, dispatch] = useReducer(contextReducer, initialState);
 
     return (
@@ -69,5 +69,3 @@ const ContextProvider = props => {
         </Context.Provider>
     )
 } 
-
-export default { Context, ContextProvider };

@@ -1,17 +1,17 @@
 import React from 'react';
 
-import appContext from 'Context';
+import { ContextProvider } from 'Context';
 import NameSection from 'components/NameSection';
 
 import './App.css';
 
 const App  = () => {
   return (
-    <appContext.ContextProvider>
+    <ContextProvider>
       <div className="App">
           <NameSection />              
       </div>
-    </appContext.ContextProvider>
+    </ContextProvider>
   );
 }
 

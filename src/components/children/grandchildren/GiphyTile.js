@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import appContext from 'Context';
+import { Context } from 'Context';
 
 const GiphyTile = () => {
-    const { actions, dispatch, state: { giphyUrl } } = useContext(appContext.Context);
+    const { actions, dispatch, state: { giphyUrl } } = useContext(Context);
 
     return (
         <div>
