@@ -2,6 +2,10 @@ import React, { useContext, useReducer, useState } from 'react';
 import { Context } from 'Context';
 import GiphyTile from './GiphyTile'; 
 
+const localInitialState = {
+    foo: '',
+};
+
 const localActions = {
     setFoo: value => ({
         type: 'FOO',
@@ -9,7 +13,7 @@ const localActions = {
     })
 };
 
-const localReducer = (state = {}, action) => {
+const localReducer = (state = localInitialState, action) => {
     switch (action.type) {
         case ('FOO'):
             return {
